@@ -1,4 +1,4 @@
-1h Java IDK ja NetBeans asennus
+20150513 1h Java IDK ja NetBeans asennus
   - Oikeian Netbeans-version haku
   - Netbeans -asennuksen aloitus -> vaatii päivittämään JDK:n
   - JDK:n haku ja asennus
@@ -6,12 +6,12 @@
   - JDK 64-bit version asennus
   - Netbeans -asennus
 
-1,5h GitHub-säätöä
+20150513 1,5h GitHub-säätöä
   - GitHub-tunnuksen luominen 
   - GitHub-clientin asennus
   - Repon luominen
 
-1,5h Netbeans / Github -säätöä
+20150513 1,5h Netbeans / Github -säätöä
   - Git-komentojen opettelua Git Shellissä
   - Ohjeiden tankkaamista
   - Projektin luominen NetBeansiin

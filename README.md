@@ -1,2 +1,2 @@
-# velmutin
-Videoanalyysien harjoittelu- ja tallennussovellus VELMU -ohjelman käyttöön
+# Velmutin
+Videoanalyysien harjoittelu- ja tallennussovellus vedenalaisen meriluonnon monimuotoisuuden inventointiohjelman (VELMU) käyttöön

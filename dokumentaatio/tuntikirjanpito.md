@@ -17,5 +17,7 @@
   - Projektin luominen NetBeansiin
   - tarvittavien .md-tiedostojen luominen
 
+20150514 2h Aihekuvauksen kirjoittaminen
+
 
 

@@ -9,8 +9,10 @@ SYKEssä on ROV-videoiden (Remotely Operated Vehicle, vedenalainen robottivideoka
 ####Tavoite
 Kurssin puitteissa tuotetaan videotiedostoja näyttävä sovellus, jolla voidaan:
   - Harjoittelumoodissa kirjata analyysitietoja ja verrata niitä etukäteen määritettyihin arvoihin sekä pitää kirjaa harjoittelijan edistyksestä (viimeisimmän videon tulos, keskiarvoja) 
-  - Analyysimoodissa tallentaa kirjattuja analyysitietoja halutussa muodossa (VELMU 2015 analyysiExcel -yhteensopiva tekstitiedosto tai LajiGIS -sisäänsyöttötaulukko) 
   - Ylläpitomoodissa voidaan lisätä harjoiteltavia videoita ja niiden analyysitietoja, joihin harjoittelutuloksia verrataan.
+
+Mikäli mahdollista, sovelluksessa voidaan myös:
+  - Analyysimoodissa tallentaa kirjattuja analyysitietoja halutussa muodossa (VELMU 2015 analyysiExcel -yhteensopiva tekstitiedosto tai LajiGIS -sisäänsyöttötaulukko) 
 
 Lisäksi selvitetään mahdollisuuksia laajentaa sovellusta hyödyntämään paikannustietoja Tritechin tuottamassa muodossa ja drop-videokameroiden ohjelmiston tuottamassa muodossa. 
 
@@ -44,10 +46,10 @@ Kolme erillistä käyttäjätapausta:
     - Lisättävän videon merialueen syöttö
     - Lisättävän videon analyysitietojen syöttö
 
-*Uusien videoiden ja niiden analyysitietojen lisääminen* - harjoitusvideoita on jossain vaiheessa tarvetta lisätä. Itse sovelluksessa tuskin tarvitaan videoille erillistä import-toimintoa vaan videot voi kopioida suoraan videohakemistoon. Samoin voisi toimia myös esimerkkianalyysitiedot sisältävän tekstitiedoston kanssa mutta tämä vaatii tarkkuutta je perehtyneisyyttä - arvojen ja otsikoiden lisääminen teksti- tai .csv -tiedostoihin on hankalaa ja virheitä voi sattua. Parempi siis jos harjoitusvideoille lisätään analyysitiedot ohjelman kautta siten, että video analysoidaan kuten harjoituksessa mutta tiedot tallennetaan videoiden analyysitiedot sisältävään tiedostoon. Tällöin ei ole tarvetta sörkkiä tiedostoja tekstieditorilla tai Excelillä. 
+*Uusien videoiden ja niiden analyysitietojen lisääminen* - harjoitusvideoita on jossain vaiheessa tarvetta lisätä. Itse sovelluksessa tuskin tarvitaan videoille erillistä import-toimintoa vaan videot voi kopioida suoraan videohakemistoon. Samoin voisi toimia myös esimerkkianalyysitiedot sisältävän tekstitiedoston kanssa mutta tämä vaatii tarkkuutta je perehtyneisyyttä - arvojen ja otsikoiden lisääminen teksti- tai .csv -tiedostoihin on hankalaa ja virheitä voi sattua. Vaihtoehtona voisi olla siis että harjoitusvideoille lisätään analyysitiedot ohjelman kautta siten, että video analysoidaan kuten harjoituksessa mutta tiedot tallennetaan videoiden analyysitiedot sisältävään tiedostoon. Tällöin ei ole tarvetta sörkkiä tiedostoja tekstieditorilla tai Excelillä. 
 
 
 ####Haasteita
-*Näytön koko* - työskentely tapahtuu useimmiten läppärillä
+*Näytön koko* - työskentely tapahtuu useimmiten läppärillä, joten videokuvan ja analyysiin tarkoitettavan ikkunan sovittaminen näytölle voi olla hankalaa. 
 
 *Videoiden koko* - jos ohjelmapaketti sisältää esimerkkivideot, tulee siitä sitä suurempi mitä enemmän videoita on. Yksi mahdollisuus olisi striimata videot jostain (esim. Youtube) mutta koska työskentely tapahtuu monesti kentällä huonon tai olemattoman nettiyhteyden äärellä, tämä tuskin on järkevä vaihtoehto. Ensimmäisessä vaiheessa (tämä kurssilla tehtävä Java-versio) siis toteutaan paikallisena eli siten, että videot ja niiden tiedot jaetaan ohjelman mukana. Jatkossa jos sovelluksesta halutaan online-versio, voidaan videot viedä ympäristöhallinnon palvelimelle tai striimauspalveluun (esim. Youtube). 

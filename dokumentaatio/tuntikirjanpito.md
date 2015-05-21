@@ -19,5 +19,14 @@
 
 20150514 2h Aihekuvauksen kirjoittaminen
 
+20150519 3h Yleistä pohdintaa
+  - Muuttujien läpikäyntiä
+  - Käyttötapausten kirjoittamista
+  - Käyttöliittymän suunnittelua
 
+20150521 1h Yleistä pohdintaa
+  - Luokkarakenteen pähkäilyä
 
+20150521 4h
+  - Luokkakaavio
+  - Luokkien aloittelua

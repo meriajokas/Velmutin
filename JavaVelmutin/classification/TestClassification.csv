@@ -1,2 +1,15 @@
-Stones;Gravel;Rock;Clay;Mud;Fucus sp.;Red algae;Annual algae;Chara tomentosa;Chara braunii;Zostera;Potamogeton filiformis;Potamogeton perfoliatus;Saduria entomon;Balanus improvisus
-SubPer;SubPer;SubPer;SubPer;SubPer;AlgPer;AlgPer;AlgPer;ChaPer;ChaPer;VasPer;VasPer;VasPer;FauPcs;FauPer
+Stones;SubPer
+Gravel;SubPer
+Rock;SubPer
+Clay;SubPer
+Mud;SubPer
+Fucus sp.;AlgPer
+Red algae;AlgPer
+Annual algae;AlgPer
+Chara tomentosa;ChaPer
+Chara braunii;ChaPer
+Zostera;VasPer
+Potamogeton filiformis;VasPer
+Potamogeton perfoliatus;VasPer
+Saduria entomon;FauPcs
+Balanus improvisus;FauPer

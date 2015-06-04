@@ -21,7 +21,7 @@ public class Video {
         this.VideoObservations = new ArrayList<>();
     }
     
-    public void setObservation(Observation newObservation) {
+    public void addObservation(Observation newObservation) {
         VideoObservations.add(newObservation); //pitäisikö olla this.VideoObservations?
         amountOfObservations++;
     }
@@ -32,6 +32,14 @@ public class Video {
         }
         return null;
     } 
+    
+    public String toString() {
+        String string = new String();
+        for(int i = 0; i < amountOfObservations; i++) {
+            string += VideoObservations.get(i) + "\n";
+        }
+        return string;
+    }
     
     
 }

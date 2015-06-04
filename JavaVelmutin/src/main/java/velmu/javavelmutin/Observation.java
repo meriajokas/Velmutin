@@ -15,6 +15,10 @@ public class Observation {
     private String type;
     private String value;
     
+    public Observation() {
+        
+    }
+    
     public Observation(String name, String type, String value) {
         this.name = name;
         this.type = type;

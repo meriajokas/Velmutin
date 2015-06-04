@@ -1,0 +1,7 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}VELMU / ville.karvinen@iki.fi
+<#if licenseLast??>
+${licenseLast}
+</#if>

@@ -1,13 +1,5 @@
-20150513 1h Java IDK ja NetBeans asennus
-  - Oikeian Netbeans-version haku
-  - Netbeans -asennuksen aloitus -> vaatii päivittämään JDK:n
-  - JDK:n haku ja asennus
-  - Netbeans -asennuksen aloitus -> vaatii JDK:n 64-bit -versiota
-  - JDK 64-bit version asennus
-  - Netbeans -asennus
-
 20150513 1,5h GitHub-säätöä
-  - GitHub-tunnuksen luominen 
+  - GitHub-tunnuksen luominen
   - GitHub-clientin asennus
   - Repon luominen
 
@@ -30,3 +22,20 @@
 20150521 4h
   - Luokkakaavio
   - Luokkien aloittelua
+
+20150528 1h
+  - Luokkien hahmottelua
+
+20150531 2,5h
+  - Koodikatselmointia
+
+20150604 6h
+  - OpenCSV:n opettelua
+  - Video ja Observation-luokkien koodaus
+  - FileUtil-luokan koodausta (Read-metodit)
+  - Yleistä updeittailua
+
+20150605 4h
+  - FileUtil-luokan koodausta (Write-metodi)
+  - Yleistä updeittailua
+

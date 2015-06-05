@@ -53,4 +53,8 @@ public class Observation {
     public String toString() {
         return name + " (" + type + ")" + ": " + value;
     }
+    
+    public String toCsv() {
+        return name + ";" + type + ";" + value;
+    }
 }

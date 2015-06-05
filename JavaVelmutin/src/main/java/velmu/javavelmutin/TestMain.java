@@ -1,7 +1,5 @@
 package velmu.javavelmutin;
-import java.util.*;
-import java.io.*;
-import com.opencsv.*;
+
 /*
  * VELMU / ville.karvinen@iki.fi
  */
@@ -12,14 +10,18 @@ import com.opencsv.*;
  */
 public class TestMain {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
+    public static void main(String[] args) {      
+// Create new instance of video:
+      Video thisVideo = new Video();
+      
+// Create new instance of FileUtil:
       FileUtil utilizer = new FileUtil();
-      utilizer.ReadClassification();
+      
+// Read classification scheme for thisVideo:
+      utilizer.ReadClassification(thisVideo);
+      
+// Create the analysis CSV file:
+      utilizer.SaveAnalysis(thisVideo);
     } 
 }
     

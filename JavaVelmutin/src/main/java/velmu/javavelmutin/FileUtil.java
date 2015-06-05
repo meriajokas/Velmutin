@@ -2,7 +2,6 @@
  * VELMU / ville.karvinen@iki.fi
  */
 package velmu.javavelmutin;
-import java.util.*;
 import java.io.*;
 import com.opencsv.*;
 
@@ -14,8 +13,15 @@ import com.opencsv.*;
  */
 
 public class FileUtil {
-    
-    public void ReadClassification () {
+      
+    /**
+     * ReadClassification - Reads a CSV file containing names and types to 
+     * instances of the Observation class and adds them to the ArrayList of new
+     * instance of Video. Used in analysis mode to import classification scheme 
+     * and to set up the analysis for a video that does not have a saved 
+     * analysis file.
+    */    
+    public void ReadClassification (Video thisVideo) {
         
         try {
         CSVReader reader = new CSVReader(new 
@@ -25,8 +31,6 @@ public class FileUtil {
         // Tähän prompti, joka näyttää valittavana olevat tiedostot? Esim.
         // JFileChooser?
         
-        Video thisVideo = new Video(); 
-        //Tämä pitää jotenkin saada nimettyä videotiedoston mukaan!
         String[] tempList;
 
         while((tempList = reader.readNext()) != null){
@@ -36,7 +40,7 @@ public class FileUtil {
             thisVideo.addObservation(obs);
         }  
         reader.close();
-        System.out.println(thisVideo);
+        //For testing purposes: System.out.println(thisVideo);
         
         } catch (FileNotFoundException e) {
             System.out.println("Tiedostoa ei löydy!");
@@ -45,28 +49,70 @@ public class FileUtil {
         }
     }
     
-    /*
-    ReadClassification - Tätä käytetään analyysimoodissa kun videolla ei ole 
-    omaa analyysitiedostoa. 
-    Lukee OpenCSV:n avulla tiedoston, muuttaa sen Observationeiksi 
-    ja lykkää observationit Video-olioon. 
-    Lukee siis rivi kerrallaan ja tekee uuden Observationin antaen sille name ja  
-    type -muuttujat sekä lisää Observationin VideoObservationin ArrayListiin.
-    */
+    /**
+     * ReadAnalysis - Reads a CSV file containing names, types and values to 
+     * instances of the Observation class and adds them to the ArrayList of new
+     * instance of Video. Used in practice mode to import the classification 
+     * scheme and predetermined values to set up the practice analysis for a
+     * video with a saved analysis file.
+    */ 
     
-    /*
-    ReadAnalysis - Tätä käytetään harjoittelumoodissa kun videolla on olemassa
-    analyysitiedosto. Muuten sama kuin ReadClassification mutta lukee myös 
-    kolmannen sarakkeen value-arvoiksi. 
-    Muista: obs.setValue(tempList[2]);
-    */
+    public void ReadAnalysis (Video thisVideo) {
+        
+        try {
+        CSVReader reader = new CSVReader(new 
+        FileReader("D:\\Users\\karvinenv\\Docs\\GitHub\\Velmutin"
+                + "\\JavaVelmutin\\classification\\TestAnalysis.csv"), 
+                ';' , '"'); 
+        // TODO: Valitsee tiedostoksi videon nimen mukaisen analyysitiedoston.
+
+        String[] tempList;
+
+        while((tempList = reader.readNext()) != null){
+            Observation obs = new Observation();
+            obs.setName(tempList[0]);
+            obs.setType(tempList[1]);
+            obs.setValue(tempList[2]);
+            thisVideo.addObservation(obs);
+        }  
+        reader.close();
+        //For testing purposes: System.out.println(thisVideo);
+        
+        } catch (FileNotFoundException e) {
+            System.out.println("Tiedostoa ei löydy!");
+        } catch (IOException e) {
+            System.out.println("IOException!");
+        }
+    }
     
-    /*
-    SaveAnalysis - kirjoittaa OpenCSV:n avulla Videon havainnot CSV:ksi. 
-    Kaivaa VideoObservationin ArraListista Observation-oliot ja kirjoittaa ne 
-    CSV-tiedostoon jokaisen omalle rivilleen. Jos käyttäjä on ylläpitäjä,
-    tallennetaan tiedosto videon omaksi analyysitiedostoksi, jos tavallinen
-    käyttäjä niin tallennetaan käyttäjän omaan tiedostoon (vaatii speksausta!). 
+    /**
+     * SaveAnalysis - uses OpenCSV to save the Videos Observations to a file. 
+    */ 
     
-    */
+    public void SaveAnalysis(Video thisVideo) {
+        try {
+        /* TODO: 
+            a) Tarkistaa onko käyttäjä ylläpitäjä, jos on niin tallennetaan 
+            videon omaksi analyysitiedostoksi. Jos ei, tallennetaan käyttäjän 
+            omaan tulostiedostoon. 
+            b) Tähän pätkä joka kaivaa videotiedoston nimen ja luo SaveFile 
+            -Stringin (hakemistopolku\\ + VideonNimi + Analysis), ja se annetaan 
+            FileWriterille parametriksi
+        */   
+            
+        CSVWriter writer = new CSVWriter(new FileWriter("D:\\Users\\karvinenv\\"
+                + "Docs\\GitHub\\Velmutin\\JavaVelmutin\\analysis\\"
+                + "TestAnalysis.csv"), ';', '"');
+        
+        for(int i = 0; i < thisVideo.amountOfObservations; i++) {
+            String [] tempList = (thisVideo.getObservation(i).toCsv()).split(";");
+      //Writes the tempList to file
+        writer.writeNext(tempList);
+        }
+      //Closes the writer
+        writer.close();
+        } catch (IOException e) {
+            System.out.println("IOException!");
+        }
+    }
 }

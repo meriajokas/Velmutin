@@ -12,7 +12,12 @@ import java.util.*;
 
 public class Video {
     private String videoName; // This will be the filename of the video.
-    private int amountOfObservations;
+
+    /**
+     * @amountOfObservations The amount of Observation instances in the video 
+     * (stored in the ArrayList VideoObservations). 
+     */
+    protected int amountOfObservations;
     
 // VideoObservationsin ArrayList-versio
     ArrayList<Observation> VideoObservations;
